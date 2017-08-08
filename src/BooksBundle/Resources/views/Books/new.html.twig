@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+    {{ form(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+    <br>
+    <a href="{{ path('books_list') }}">Cancel</a>
+
+{% endblock %}

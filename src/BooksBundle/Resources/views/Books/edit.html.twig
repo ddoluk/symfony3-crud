@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+    <h3>Edit Book</h3>
+
+    {{ form(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+    <br>
+    <a href="{{ path('books_list') }}">Cancel</a>
+
+{% endblock %}

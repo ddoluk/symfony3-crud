@@ -1,0 +1,27 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+    <h3>View Book</h3>
+    <ul>
+        <li>
+            <strong>Author:</strong> {{ book.author }}
+        </li>
+        <li>
+            <strong>Name of Book:</strong> {{ book.bookName }}
+        </li>
+        <li>
+            <strong>Price:</strong> {{ book.price }}
+        </li>
+        <li>
+            <strong>Published:</strong> {{ book.published | date('Y-m-d') }}
+        </li>
+    </ul>
+
+    <br>
+
+    <a href="{{ path('books_list') }}">Books list</a>&nbsp;
+    <a href="{{ path('books_edit',{'id':book.id}) }}">Edit book</a>&nbsp;
+    <a href="{{ path('books_delete',{'id':book.id}) }}">Delete book</a>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+<?php
+
+namespace BooksBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity()
+ * @ORM\Table(name="books")
+ */
+class Books
+{
+    /**
+     * @ORM\Column(type="integer")
+     * @ORM\Id()
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string", length=64)
+     */
+    private $author;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $book_name;
+
+    /**
+     * @ORM\Column(type="float",precision=2)
+     */
+    private $price;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $published;
+}
